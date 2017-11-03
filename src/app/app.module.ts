@@ -8,13 +8,15 @@ import { LandingComponent } from './landing/landing.component';
 import { routing } from './app.routing';
 import { AboutComponent } from './about/about.component';
 import { RosterComponent } from './roster/roster.component';
+import { PlayerDetailComponent } from './player-detail/player-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     AboutComponent,
-    RosterComponent
+    RosterComponent,
+    PlayerDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -5,7 +5,7 @@
   <clr-dg-column>Game List</clr-dg-column>
 
   <clr-dg-row *clrDgItems="let player of players" >
-    <clr-dg-cell>{{player.username}}</clr-dg-cell>
+    <clr-dg-cell (click)="goToDetailPage(player)" >{{player.username}}</clr-dg-cell>
     <clr-dg-cell>{{player.genre}}</clr-dg-cell>
     <clr-dg-cell>{{player.gameList}}</clr-dg-cell>
   </clr-dg-row>
