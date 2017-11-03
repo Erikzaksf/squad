@@ -20,7 +20,9 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "../bower_components/bootstrap/dist/css/bootstrap.css"
+
+        "../bower_components/bootstrap/dist/css/bootstrap.css",
+        "../node_modules/clarity-ui/clarity-ui.min.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
