@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { routing } from './app.routing';
 import { AboutComponent } from './about/about.component';
+import { RosterComponent } from './roster/roster.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
-    AboutComponent
+    AboutComponent,
+    RosterComponent
   ],
   imports: [
     BrowserModule,
