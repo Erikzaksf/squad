@@ -1,20 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { Player } from '../player.model';
 import { Router } from '@angular/router';
+import { PlayerService } from '../player.service';
+
 @Component({
   selector: 'app-roster',
   templateUrl: './roster.component.html',
-  styleUrls: ['./roster.component.css']
+  styleUrls: ['./roster.component.css'],
+  providers: [PlayerService]
 })
-export class RosterComponent {
+export class RosterComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  players: Player[];
+  
+  constructor(private router: Router, private playerService: PlayerService) { }
 
-
-
-  players: Player[] = [
-    new Player("FunkinFresh","PlayerUnknows Battlegrounds, Rust, FortniteBR, The Forest, Paladins", "Survival, FPS, Action/Adventure", 1)
-  ]
+  ngOnInit(){
+    this.players = this.playerService.getPlayers();
+  }
 
   goToDetailPage(clickedPlayer: Player) {
     this.router.navigate(['players', clickedPlayer.id]);
