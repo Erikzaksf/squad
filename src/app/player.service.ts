@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Player } from './player.model';
-import { PLAYERS } from './mock-players';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
@@ -22,6 +21,13 @@ export class PlayerService {
 
   getPlayerById(playerId: string){
     return this.database.object('players/' + playerId);
+  }
+
+  updatePlayer(localUpdatedPlayer){
+  var playerEntryInFirebase = this.getPlayerById(localUpdatedPlayer.$key);
+  playerEntryInFirebase.update({username: localUpdatedPlayer.username,
+                              genre: localUpdatedPlayer.genre,
+                              gameList: localUpdatedPlayer.gameList});
   }
 
 }

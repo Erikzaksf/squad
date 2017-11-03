@@ -14,6 +14,8 @@ export class RosterComponent implements OnInit {
 
   players: FirebaseListObservable<any[]>;
 
+  currentRoute: string = this.router.url;
+
   constructor(private router: Router, private playerService: PlayerService) { }
 
   ngOnInit(){

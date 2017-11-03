@@ -1,0 +1,16 @@
+<h4>Edit Player</h4>
+
+<label>Username:</label>
+<input [(ngModel)]="selectedPlayer.username">
+<br>
+
+<label>Genre:</label>
+<input size="35" [(ngModel)]="selectedPlayer.genre">
+<br>
+
+<label>Game List:</label>
+<input size="45" [(ngModel)]="selectedPlayer.gameList">
+
+<button class="btn" (click)="beginUpdatingPlayer(selectedPlayer)">>Update</button>
+
+<button class="btn btn-warning-outline" (click)="beginDeletingPlayer(selectedPlayer)">Delete</button>
