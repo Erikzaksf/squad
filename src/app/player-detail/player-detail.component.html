@@ -1,5 +1,7 @@
 <div>
-  <h3 class="titleStyle">{{(playerToDisplay).username}}</h3>
-  <h4 class="artistStyle">{{(playerToDisplay).genre}}</h4>
-  <p>{{(playerToDisplay).gameList}}</p>
+  <h2 class="titleStyle">{{(playerToDisplay | async).username}}</h2>
+  <h3 class="purple">Genre:</h3>
+  <h4 class="artistStyle">{{(playerToDisplay| async).genre}}</h4>
+  <h3 class="purple">Game List:</h3>
+  <h4>{{(playerToDisplay | async).gameList}}</h4>
 </div>

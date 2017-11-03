@@ -16,6 +16,7 @@ Admin Page
             <label for="formFields_8">Game List</label>
             <textarea #newGameList rows="4"></textarea>
         </div>
-            <button class="btn btn-success" (click)="submitForm(newUsername.value, newGenre.value, newGameList.value); newUsername.value=''; newGenre.value=''; newGameList.value=''">Add</button>
+
+            <button class="btn btn-success" (click)="submitForm(newUsername.value, newGameList.value , newGenre.value); newUsername.value='';  newGameList.value='' ;  newGenre.value=''">Add</button>
       </section>
 </form>
