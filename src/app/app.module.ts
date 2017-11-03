@@ -20,7 +20,8 @@ import { RosterComponent } from './roster/roster.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    ClarityModule.forRoot()  
   ],
   providers: [],
   bootstrap: [AppComponent]
