@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Player } from '../player.model';
 import { Router } from '@angular/router';
 import { PlayerService } from '../player.service';
-import { FirebaseListObservable } from 'angularfire2/database';
+import { FirebaseListObservable } from 'angularfire2/database-deprecated';
 
 @Component({
   selector: 'app-roster',
